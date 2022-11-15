@@ -1,3 +1,4 @@
+
 # Quản lí sinh viên trong quá trình tham gia các hoạt động của CLB ITMC
 
 Viết chương trình quản lí và thực hiện điểm danh các sinh viên tham gia các hoạt động của CLB ITMC. Mỗi sinh viên trước khi tham gia hoạt động sẽ được Check in để điểm danh và sau khi kết thúc buổi sinh hoạt chung với CLB sẽ thực hiện check out để xác định sinh viên có tham gia hết buổi sinh hoạt hay không.
@@ -11,11 +12,11 @@ Danh sách các sinh viên với mỗi **Sinh viên** có các thông tin sau:
 
 Mã số sinh viên sẽ có cấu trúc sau:
 
-$$"\text{N}/\text{B}" + \text{Khóa nhập học} \; + \text{Mã ngành học} \; + \text{Số thứ tự sinh viên}$$
+$$\text{N}/\text{B} + \text{Khóa nhập học} \; + \text{Mã ngành học} \; + \text{Số thứ tự sinh viên}$$
 
 Trong đó:
 
-- $"\text{N}/\text{B}"$: tương ứng với sinh viên ở học viện cơ sở miền Nam hoặc miền Bắc.
+- $\text{N}/\text{B}$: tương ứng với sinh viên ở học viện cơ sở miền Nam hoặc miền Bắc.
 - $\text{Khóa nhập học}$: là hai số sau của năm sinh viên nhập học. Ví dụ sinh viên nhập học năm $2021$ sẽ có $\text{Khóa nhập học}$ là $21$.
 - $\text{Mã ngành học}$: là mã ngành học tương ứng của sinh viên. Danh sách các mã ngành học của Học viện Cơ sở như sau:
 
@@ -46,5 +47,8 @@ Chi tiết cụ thể các chức năng như sau:
 - Chức năng **Thêm/Sửa/Xóa Sinh viên của CLB**: Chức năng sẽ tác động lên các thông tin của mỗi sinh viên.
 - Chức năng **Tra cứu sinh viên** dựa vào họ và tên hoặc MSSV. Kết quả tra cứu sẽ cho ra thông tin cơ bản của sinh viên và danh sách các buổi tham gia hoặc vắng hoạt động của CLB.
 - Chức năng **Tra cứu buổi sinh hoạt của CLB** theo mã của buổi sinh hoạt: Kết quả tra cứu sẽ cho ra thông tin cơ bản của buổi sinh hoạt cùng với danh sách các sinh viên tham gia và sinh viên không tham gia.
+- Chức năng **Xếp hạng**: Đưa ra danh sách $10$ sinh viên tham gia nhiều hoạt động nhất. Nếu có nhiều sinh viên có cùng số lần tham gia hoạt động, thì sắp xếp theo họ và tên.
+- Chức năng **Thống kê sinh viên**: In ra danh sách sinh viên ở trong CLB được sắp xếp theo MSSV, họ và tên và số lần tham gia hoạt động của CLB.
+- Chức năng **Thống kê các hoạt động**: In ra danh sách các hoạt động của CLB được sắp xếp theo ngày diễn ra đi kèm với danh sách sinh viên tham gia hoặc không tham gia hoạt động.
 
-***Yêu cầu:*** Không cần tạo UI cho toàn bộ chương trình. Chỉ thực hiện phần logic và tạo form đơn giản trên console. Chương trình phải có menu để chọn thực hiện các chức năng đã liệt kê.
+***Yêu cầu:*** Tạo Menu và UI cho chương trình, trong đó mỗi chức năng sẽ có UI riêng.

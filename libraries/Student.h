@@ -13,7 +13,12 @@ class Student {
         string last_name;
         string phone_number;
 
-        
+        bool checkValidStudentID(string __student_id) {
+            bool result;
+
+            
+            return result;
+        }
 
     public:
         Student(string __student_id = "###", string __class_id = "###", string __first_name = "###", string __last_name = "###", string __phone_number = "###") {
