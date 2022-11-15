@@ -144,6 +144,11 @@ class Date {
             return false;
         }
 
+        /*
+        * Method which is overloading operator << of the ostream.
+        @param cout: a reference to ostream object.
+        @param currentDate: the date which will be represented.
+        */
         friend ostream& operator << (ostream& cout, Date currentDate) {
             cout << "Date: ";
             cout << (currentDate.getDate() < 10 ? "0" : "") << currentDate.getDate() << "/";
