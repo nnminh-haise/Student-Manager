@@ -4,12 +4,33 @@ Viết chương trình quản lí và thực hiện điểm danh các sinh viên
 
 Danh sách các sinh viên với mỗi **Sinh viên** có các thông tin sau:
 
-- Họ và tên.
 - Mã số sinh viên.
+- Họ và tên.
 - Mã lớp.
 - Số điện thoại.
-- Số lần tham gia hoạt động của CLB.
-- Số lần vắng, mỗi lần vắng sẽ kèm theo lí do. Nếu không có lí do thì sẽ mặc định là vắng không phép.
+
+Mã số sinh viên sẽ có cấu trúc sau:
+
+$$"\text{N}/\text{B}" + \text{Khóa nhập học} \; + \text{Mã ngành học} \; + \text{Số thứ tự sinh viên}$$
+
+Trong đó:
+
+- $"\text{N}/\text{B}"$: tương ứng với sinh viên ở học viện cơ sở miền Nam hoặc miền Bắc.
+- $\text{Khóa nhập học}$: là hai số sau của năm sinh viên nhập học. Ví dụ sinh viên nhập học năm $2021$ sẽ có $\text{Khóa nhập học}$ là $21$.
+- $\text{Mã ngành học}$: là mã ngành học tương ứng của sinh viên. Danh sách các mã ngành học của Học viện Cơ sở như sau:
+
+    - $\text{DCCN}$: tương ứng với ngành công nghệ thông tin.
+    - $\text{DCPT}$: tương ứng với ngành công nghệ đa phương tiện.
+    - $\text{DCMR}$: tương ứng với ngành marketing.
+    - $\text{DCVT}$: tương ứng với ngành viễn thông.
+    - $\text{DCDT}$: tương ứng với ngành điện tử.
+    - $\text{DCKT}$: tương ứng với ngành kế toán.
+    - $\text{DCIT}$: tương ứng với ngành IoT.
+
+- $\text{Số thứ tự sinh viên}$: là số thứ tự của sinh viên trong cùng một ngành được sắp xếp theo họ và tên của sinh viên.
+
+Ví dụ với hai sinh viên cùng học ngành công nghệ thông tin tại Học viện Cơ sở có tên Nguyễn Văn A và Nguyễn Văn B năm $2021$ thì sẽ có mã số sinh viên tương ứng là: $\text{N21DCCN001}$ và $\text{N21DCCN002}$.
+
 
 Danh sách các buổi sinh hoạt với mỗi *Buổi sinh hoạt* sẽ có các thông tin sau:
 
