@@ -7,13 +7,13 @@ using namespace std;
 
 class Student {
     private:
-        string student_id;
-        string class_id;
-        string first_name;
-        string last_name;
-        string phone_number;
+        string studentID;
+        string classID;
+        string firstName;
+        string lastName;
+        string phoneNumber;
 
-        bool checkValidStudentID(string __student_id) {
+        bool checkValidStudentID(string __studentID) {
             bool result;
 
             
@@ -21,52 +21,52 @@ class Student {
         }
 
     public:
-        Student(string __student_id = "###", string __class_id = "###", string __first_name = "###", string __last_name = "###", string __phone_number = "###") {
-            student_id = __student_id;
-            class_id = __class_id;
-            first_name = __first_name;
-            last_name = __last_name;
-            phone_number = __phone_number;
+        Student(string __studentID = "###", string __classID = "###", string __firstName = "###", string __lastName = "###", string __phoneNumber = "###") {
+            studentID = __studentID;
+            classID = __classID;
+            firstName = __firstName;
+            lastName = __lastName;
+            phoneNumber = __phoneNumber;
         }
 
-        void setStudentID(string __student_id) {
-            this->student_id = __student_id;
+        void setStudentID(string __studentID) {
+            this->studentID = __studentID;
         }
 
-        void setClassID(string __class_id) {
-            this->class_id = __class_id;
+        void setClassID(string __classID) {
+            this->classID = __classID;
         }
 
-        void setFirstName(string __first_name) {
-            this->first_name = __first_name;
+        void setFirstName(string __firstName) {
+            this->firstName = __firstName;
         }
         
-        void setLastName(string __last_name) {
-            this->last_name = __last_name;
+        void setLastName(string __lastName) {
+            this->lastName = __lastName;
         }
 
-        void setPhoneNumber(string __phone_number) {
-            this->phone_number = __phone_number;
+        void setPhoneNumber(string __phoneNumber) {
+            this->phoneNumber = __phoneNumber;
         }
 
         string getStudentID() {
-            return this->student_id;
+            return this->studentID;
         }
 
         string getClassID() {
-            return this->class_id;
+            return this->classID;
         }
 
         string getFirstName() {
-            return this->first_name;
+            return this->firstName;
         }
 
         string getLastName() {
-            return this->last_name;
+            return this->lastName;
         }
 
         string getPhoneNumber() {
-            return this->phone_number;
+            return this->phoneNumber;
         }
 };
 
