@@ -2,26 +2,22 @@
 #define STUDENT_H
 
 #include <bits/stdc++.h>
+#include "./Constants.h"
+#include "./StudentID.h"
+#include "./ClassID.h"
 
 using namespace std;
 
 class Student {
     private:
-        string studentID;
-        string classID;
+        StudentID studentID;
+        ClassID classID;
         string firstName;
         string lastName;
         string phoneNumber;
 
-        bool checkValidStudentID(string __studentID) {
-            bool result;
-
-            
-            return result;
-        }
-
     public:
-        Student(string __studentID = "###", string __classID = "###", string __firstName = "###", string __lastName = "###", string __phoneNumber = "###") {
+        Student(StudentID __studentID, ClassID __classID, string __firstName = "###", string __lastName = "###", string __phoneNumber = "###") {
             studentID = __studentID;
             classID = __classID;
             firstName = __firstName;
@@ -29,11 +25,11 @@ class Student {
             phoneNumber = __phoneNumber;
         }
 
-        void setStudentID(string __studentID) {
+        void setStudentID(StudentID __studentID) {
             this->studentID = __studentID;
         }
 
-        void setClassID(string __classID) {
+        void setClassID(ClassID __classID) {
             this->classID = __classID;
         }
 
@@ -49,11 +45,11 @@ class Student {
             this->phoneNumber = __phoneNumber;
         }
 
-        string getStudentID() {
+        StudentID getStudentID() {
             return this->studentID;
         }
 
-        string getClassID() {
+        ClassID getClassID() {
             return this->classID;
         }
 
@@ -67,6 +63,16 @@ class Student {
 
         string getPhoneNumber() {
             return this->phoneNumber;
+        }
+
+        friend ostream& operator << (ostream& cout, Student student) {
+            cout << "Student's Information:\n\n";
+            cout << "Student's ID: " << student.getStudentID().stringify() << ".\n"; 
+            cout << "Student's Fullname: " << student.getFirstName() << " " << student.getLastName() << ".\n";
+            cout << "Student's Class ID: " << student.getClassID() << ".\n";
+            cout << "Student's phone number: " << student.getPhoneNumber() << ".\n";
+            cout << "---\n";
+            return cout;
         }
 };
 

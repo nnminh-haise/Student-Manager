@@ -1,3 +1,7 @@
+/*
+TODO: Thêm toán tử + và += cho class Date và class Time
+*/
+
 #ifndef DATEANDTIME_H
 #define DATEANDTIME_H
 
@@ -153,6 +157,99 @@ class Date {
             cout << "Date: ";
             cout << (currentDate.getDate() < 10 ? "0" : "") << currentDate.getDate() << "/";
             cout << (currentDate.getDate() < 10 ? "0" : "") << currentDate.getMonth() << "/" << currentDate.getYear();
+            return cout;
+        }
+};
+
+/*
+* A class represent time in hour, minute and second.
+* This class has three private attribute: hour, minute and second.
+* It has one constructor, three setter methods and three getter methods.
+*/
+class Time {
+    private:
+        unsigned int second;
+        unsigned int minute;
+        unsigned int hour;
+
+    public:
+        /*
+        * Constructor function automatically constructs the object when the object is decleared.
+        @param __hour: current hour.
+        @param __minute: current minute.
+        @param __second: current second.
+        */
+        Time (unsigned __hour = 0, unsigned int __minute = 0, unsigned int __second = 0) {
+            hour = __hour;
+            minute = __minute;
+            second = __second;
+        }
+
+        /*
+        * Setter function for setting value for attribute second of the class.
+        @param __second: current second.
+        */
+        void setSecond(unsigned int __second) {
+            this->second = __second;
+        }
+
+        /*
+        * Setter function for setting value for attribute minute of the class.
+        @param minute: current minute.
+        */
+        void setMinute(unsigned int __minute) {
+            this->minute = __minute;
+        }
+
+        /*
+        * Setter function for setting value for attribute hour of the class.
+        @param hour: current hour.
+        */
+        void setHour(unsigned int __hour) {
+            this->hour = __hour;
+        }
+
+        /*
+        * Getter function for getting value of attribute second of the class.
+        */
+        unsigned int getSecond() {
+            return this->second;
+        }
+
+        /*
+        * Getter function for getting value of attribute minute of the class.
+        */
+        unsigned int getMinute() {
+            return this->minute;
+        }
+
+        /*
+        * Getter function for getting value of attribute hour of the class.
+        */
+        unsigned int getHour() {
+            return this->hour;
+        }
+
+        /*
+        * Method return true if the format of the Time object is correct otherwise return false.
+        */
+        bool timeValidation() {
+            if (this->hour < 0 || this->hour > 23 || this->minute < 0 || this->minute > 59 || this->second < 0 || this->second > 59) {
+                return false;
+            }
+            return true;
+        }
+
+        /*
+        * Overloading operator << for class Time.
+        @param cout: ostream's object.
+        @param currentTime: Time object in which will be displayed.
+        */
+        friend ostream& operator << (ostream& cout, Time currentTime) {
+            cout << "Time: ";
+            cout << (currentTime.getHour() < 10 ? "0" : "") << currentTime.getHour() << ":";
+            cout << (currentTime.getMinute() < 10 ? "0" : "") << currentTime.getMinute() << ":";
+            cout << (currentTime.getSecond() < 10 ? "0" : "") << currentTime.getSecond();
             return cout;
         }
 };
