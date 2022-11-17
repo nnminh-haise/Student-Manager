@@ -65,7 +65,7 @@ class Student {
             return this->phoneNumber;
         }
 
-        friend ostream& operator << (ostream& cout, Student student) {
+        friend ostream &operator << (ostream &cout, Student student) {
             cout << "Student's Information:\n\n";
             cout << "Student's ID: " << student.getStudentID().stringify() << ".\n"; 
             cout << "Student's Fullname: " << student.getFirstName() << " " << student.getLastName() << ".\n";

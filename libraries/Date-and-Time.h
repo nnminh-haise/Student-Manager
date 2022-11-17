@@ -80,31 +80,6 @@ class Date {
         }
 
         /*
-        * Method returns a string represent the date in format DD/MM/YYYY.
-        @param currentDate: contains the date which will be represented.
-        */
-        friend string dateToString(Date currentDate) {
-            if (currentDate.dateValidation() == false) {
-                return "";
-            }
-
-            string result = "";
-            if (currentDate.getDate() < 10) {
-                result += "0";
-            }
-            result += to_string(currentDate.getDate());
-            result += "/";
-            if (currentDate.getMonth() < 10) {
-                result += "0";
-            }
-            result += to_string(currentDate.getMonth());
-            result += "/";
-            result += to_string(currentDate.getYear());
-
-            return result;
-        }
-
-        /*
         * Method returns true if the current year is a leap year otherwise return false.
         @param year: the year which needed to be checked.
         */
@@ -149,14 +124,36 @@ class Date {
         }
 
         /*
+        * Method return a string version of the current date.
+        */
+        string stringify(bool noSeperator = false) {
+            if (this->dateValidation() == false) {
+                return (noSeperator ? "########" : "##/##/####");
+            }
+
+            string result = "";
+            if (this->date < 10) {
+                result += "0";
+            }
+            result += to_string(this->date);
+            result += (noSeperator ? "" : "/");
+            if (this->month < 10) {
+                result += "0";
+            }
+            result += to_string(this->month);
+            result += (noSeperator ? "" : "/");
+            result += to_string(this->year);
+
+            return result;
+        }
+
+        /*
         * Method which is overloading operator << of the ostream.
         @param cout: a reference to ostream object.
         @param currentDate: the date which will be represented.
         */
         friend ostream& operator << (ostream& cout, Date currentDate) {
-            cout << "Date: ";
-            cout << (currentDate.getDate() < 10 ? "0" : "") << currentDate.getDate() << "/";
-            cout << (currentDate.getDate() < 10 ? "0" : "") << currentDate.getMonth() << "/" << currentDate.getYear();
+            cout << currentDate.stringify();
             return cout;
         }
 };
@@ -238,6 +235,31 @@ class Time {
                 return false;
             }
             return true;
+        }
+
+        string stringify(bool noSeperator = false) {
+            if (this->timeValidation() == false) {
+                return (noSeperator ? "######" : "##:##:##");
+            }
+
+            string result = "";
+
+            if (this->hour < 10) {
+                result += "0";
+            }
+            result += to_string(this->hour);
+            result += (noSeperator ? "" : ":");
+            if (this->minute < 10) {
+                result += "0";
+            }
+            result += to_string(this->minute);
+            result += (noSeperator ? "" : ":");
+            if (this->second < 10) {
+                result += "0";
+            }
+            result += to_string(this->second);
+
+            return result;
         }
 
         /*

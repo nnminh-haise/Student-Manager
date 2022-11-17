@@ -111,7 +111,7 @@ class StudentID {
             return result;
         }
 
-        friend istream& operator >> (istream& cin, StudentID& studentID) {
+        friend istream &operator >> (istream &cin, StudentID &studentID) {
             string input;
             cin >> input;
 
@@ -150,7 +150,7 @@ class StudentID {
             return cin;
         }
 
-        friend ostream& operator << (ostream& cout, StudentID studentID) {
+        friend ostream &operator << (ostream &cout, StudentID studentID) {
             cout << "Student's ID: " << studentID.stringify();
             return cout;
         }
