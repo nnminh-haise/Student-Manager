@@ -5,7 +5,7 @@ Viết chương trình quản lí và thực hiện điểm danh các sinh viên
 
 ### Danh sách sinh viên
 
-Danh sách các sinh viên với mỗi **Sinh viên** có các thông tin sau:
+Danh sách các sinh viên (tối đa $10^6$ sinh viên) với mỗi **Sinh viên** có các thông tin sau:
 
 - Mã số sinh viên.
 - Họ và tên (Chuỗi kí tự không quá $256$ kí tự).
@@ -56,7 +56,7 @@ Trong đó:
 
 ### Danh sách buổi sinh hoạt
 
-Danh sách các buổi sinh hoạt với mỗi **Buổi sinh hoạt** sẽ có các thông tin sau:
+Danh sách các buổi sinh hoạt (tối đa $10^6$ buổi sinh hoạt) với mỗi **Buổi sinh hoạt** sẽ có các thông tin sau:
 
 - ID của buổi sinh hoạt (*mỗi buổi sinh hoạt sẽ có một ID duy nhất*). 
 - Ngày diễn ra buổi sinh hoạt (*Định dạng ngày/tháng/năm: DD/MM/YYYY*).
@@ -94,6 +94,13 @@ Ví dụ ngày $21/12/2022$ diễn ra 3 buổi sinh hoạt thì theo thứ tự 
     - Mã lớp,
     - ID của buổi sinh hoạt.
     - Thời gian Check-out.
+
+- Chức năng **tạo buổi sinh hoạt mới**: Chương trình sẽ thực hiện tạo và thêm một buổi sinh hoạt với các thông tin dưới đây:
+
+    - ID của buổi sinh hoạt (*được tạo tự động dựa trên ngày diễn ra buổi sinh hoạt và mô tả cấu trúc của ID*). 
+    - Ngày diễn ra buổi sinh hoạt (*Định dạng ngày/tháng/năm: DD/MM/YYYY*).
+    - Thời gian diễn ra buổi sinh hoạt (Định dạng giờ/phút/giây).
+    - Chủ đề của buổi sinh hoạt (Chuỗi kiểu `string` không quá $256$ kí tự).
 
 - Chức năng **Thêm/Sửa/Xóa Sinh viên của CLB**: Các chức năng sẽ cho phép thêm sinh viên vào cơ sở dữ liệu, sửa thông tin của từng sinh viên bất kì trong cơ sở dữ liệu và xóa sinh viên ra khỏi cơ sở dữ liệu.
 
