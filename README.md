@@ -58,7 +58,7 @@ Trong đó:
 
 Danh sách các buổi sinh hoạt (tối đa $10^6$ buổi sinh hoạt) với mỗi **Buổi sinh hoạt** sẽ có các thông tin sau:
 
-- ID của buổi sinh hoạt (*mỗi buổi sinh hoạt sẽ có một ID duy nhất*). 
+- ID của buổi sinh hoạt (*mỗi buổi sinh hoạt sẽ có một ID duy nhất là một số nguyên được tăng tự động*). 
 - Ngày diễn ra buổi sinh hoạt (*Định dạng ngày/tháng/năm: DD/MM/YYYY*).
 - Thời gian diễn ra buổi sinh hoạt (Định dạng giờ/phút/giây).
 - Chủ đề của buổi sinh hoạt (Chuỗi kiểu `string` không quá $256$ kí tự).

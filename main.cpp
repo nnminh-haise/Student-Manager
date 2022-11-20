@@ -1,18 +1,26 @@
 #include <bits/stdc++.h>
-#include "./libraries/Date-and-Time.h"
-#include "./libraries/StudentID.h"
-#include "./libraries/ClassID.h"
-#include "./libraries/MeetingID.h"
-// #include "./libraries/Student.h"
-// #include "./libraries/Algorithms.h"
-// #include "./libraries/Attendance.h"
+#include "./Student/Student.h"
+#include "./Student/StudentDB.h"
 
 using namespace std;
 
+StudentDatabase studentDB;
 
 int main() {
-    MeetingID id;
-    cout << id << endl;
+    for (int i = 0; i < 10; ++i) {
+        studentDB.insert(Student (
+            StudentID("N21DCCN00" + to_string(i)),
+            ClassID("D21CQCN01-N"),
+            "Nhat Minh",
+            "Nguyen",
+            "0704098399",
+            Date(24, 12, 2021)
+        ));
+    }
+
+    studentDB.show();
+
+
 
     return 0;
 }
