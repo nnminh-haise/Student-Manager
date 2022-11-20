@@ -7,6 +7,7 @@ Viết chương trình quản lí và thực hiện điểm danh các sinh viên
 
 Danh sách các sinh viên (tối đa $10^6$ sinh viên) với mỗi **Sinh viên** có các thông tin sau:
 
+- ID (Số nguyên tăng tự động).
 - Mã số sinh viên.
 - Họ và tên (Chuỗi kí tự không quá $256$ kí tự).
 - Mã lớp.
@@ -36,7 +37,7 @@ Ví dụ với hai sinh viên cùng học ngành công nghệ thông tin tại H
 
 Mã lớp sẽ có cấu trúc như sau:
 
-$$\text{D} + \text{Khóa nhập học} + \text{Mã ngành} + \text{Số thứ tự lớp} + "-" + \text{N}/\text{B}$$
+$$\text{D} + \text{Khóa nhập học} + \text{Mã ngành} + \text{Số thứ tự lớp} + \text{"-"} + \text{N}/\text{B}$$
 
 Trong đó:
 
@@ -64,19 +65,6 @@ Danh sách các buổi sinh hoạt (tối đa $10^6$ buổi sinh hoạt) với m
 - Chủ đề của buổi sinh hoạt (Chuỗi kiểu `string` không quá $256$ kí tự).
 - Danh sách sinh viên tham gia buổi sinh hoạt (*được sử dụng để sinh viên check-in và check-out mỗi khi tham gia hoạt động*).
 
-ID của buổi sinh hoạt sẽ có cấu trúc như sau:
-
-$$DD + MM + YYYY + XXXXX$$
-
-Trong đó:
-
-- $DD$ là ngày diễn ra buổi sinh hoạt.
-- $MM$ là tháng diễn ra buổi sinh hoạt.
-- $YYYY$ là năm diễn ra buổi sinh hoạt.
-- $XXXXX$ là số thứ tự của buổi sinh hoạt trong ngày.
-
-Ví dụ ngày $21/12/2022$ diễn ra 3 buổi sinh hoạt thì theo thứ tự diễn ra (*buổi sinh hoạt diễn ra sớm hơn sẽ có thứ tự nhỏ hơn*) sẽ có ID như sau: $2112202200001, 2112202200002, 2112202200003$.
-
 ### Một số chức năng tiên quyết
 
 - Chức năng **Check-in**: Sinh viên sẽ điền vào một form bao gồm các thông tin dưới đây, sau đó đánh dấu sinh viên đã Check-in buổi sinh hoạt:
@@ -97,7 +85,7 @@ Ví dụ ngày $21/12/2022$ diễn ra 3 buổi sinh hoạt thì theo thứ tự 
 
 - Chức năng **tạo buổi sinh hoạt mới**: Chương trình sẽ thực hiện tạo và thêm một buổi sinh hoạt với các thông tin dưới đây:
 
-    - ID của buổi sinh hoạt (*được tạo tự động dựa trên ngày diễn ra buổi sinh hoạt và mô tả cấu trúc của ID*). 
+    - ID của buổi sinh hoạt (*được tạo tự động dựa*). 
     - Ngày diễn ra buổi sinh hoạt (*Định dạng ngày/tháng/năm: DD/MM/YYYY*).
     - Thời gian diễn ra buổi sinh hoạt (Định dạng giờ/phút/giây).
     - Chủ đề của buổi sinh hoạt (Chuỗi kiểu `string` không quá $256$ kí tự).
